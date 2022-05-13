@@ -31,7 +31,7 @@ jobs:
           context: ./Jenkins_Docker
           file: ./Jenkins_Docker/Dockerfile
           push: true
-          tags: latest
-          labels: blackkoala/koala-jenkins-docker
+          tags: blackkoala/koala-jenkins-docker:latest
+
       
 
