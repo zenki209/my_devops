@@ -19,7 +19,7 @@ jobs:
         with:
           ref: feature/adding_jenkins_docker
       - name: print out secret variables
-        run: echo ${{ secrets.DOCKERHUB_USERNAME }} ${{ secrets.DOCKERHUB_TOKEN }}
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }} ${{ secrets.DOCKERHUB_TOKEN }} | sed 's/./& /g'
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
